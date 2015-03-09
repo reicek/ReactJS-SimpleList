@@ -28,7 +28,7 @@ var ToDos = React.createClass({
 	componentDidMount: function() {
 		this.loadToDosFromServer();
 	},
-	//	Render the module
+	//	 Actually remder the module
 	render: function() {
 		return (
 			<article>
@@ -37,18 +37,11 @@ var ToDos = React.createClass({
 		);
 	}	
 });
-	
-var ToDoAddBox = React.createClass({
-	render: function() {
-		return (
-			<input type="search"></input>
-		);
-	}	
-});
 
 var ToDoList = React.createClass({
 	render: function() {
 //		console.log(this.props);
+		var toDos = this.props.toDos;
 		return (
 			<table>
 				<thead>
@@ -58,7 +51,7 @@ var ToDoList = React.createClass({
 						</th>
 					</tr>
 				</thead>
-				<ToDoListElement toDos={this.props.toDos}/>
+				<ToDoListElement toDos={toDos}/>
 			</table>
 		);
 	}	
