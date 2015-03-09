@@ -1,0 +1,22 @@
+table
+	padding			0.2em
+	margin			1em
+	box-shadow		0 0.1em 0.1em #777 , inset 0 0 0.1em #777
+	border-radius	0.5em
+	transition		all 0.3s
+	
+	&:hover
+		box-shadow	0 0.2em 0.5em #555 , inset 0 0 0.1em #777
+	tbody
+		& tr
+			transition			all 0.3s
+			&:nth-child(even)
+				background-color	#ccc
+			&:hover
+				background-color	#777
+				color				#fff
+	td
+		padding				0.3em
+		margin				0.5em
+		border-radius		0.5em
+		text-align			center
