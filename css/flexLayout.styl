@@ -36,12 +36,19 @@ body
 	section
 		display 			flex
 		flex 				10
+		justify-content 	center
+		align-items 		center
 
 		article
 			display 			flex
-			flex-direction		column
-			flex 				4
 			justify-content 	center
 			align-items 		center
-			background-color 	#fff
-	
+			background-color 	#fffarticle
+			padding				1em
+			margin				1em
+			box-shadow			0 0.1em 0.1em #777 , inset 0 0 0.1em #777
+			border-radius		0.5em
+			transition			all 0.3s
+			
+			&:hover
+				box-shadow			0 0.2em 0.5em #555 , inset 0 0 0.1em #777

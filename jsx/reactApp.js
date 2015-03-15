@@ -1,7 +1,14 @@
-//	Root module
 var SimpleList = React.createClass({
-	//	Download state with server data
-	loadSimpleListFromServer: function() {
+	getInitialState: function() {
+        return {
+			simpleList: [
+				{
+					row: 'cargando	...'
+				}
+			]
+        };
+    },
+	componentDidMount: function() {
 		$.ajax({
 			url: this.props.url,
 			dataType: 'json',
@@ -16,32 +23,12 @@ var SimpleList = React.createClass({
 			}.bind(this)
 		});
 	},
-	//	Set the initial (default) state
-	getInitialState: function() {
-        return {
-			simpleList: [
-				{
-					row: ''
-				}
-			]
-        };
-    },
-	componentDidMount: function() {
-		this.loadSimpleListFromServer();
-	},
-	//	 Actually remder the module
 	render: function() {
 		return (
-			<table>
-				<thead>
-					<tr>
-						<th>
-							Pasos para dominar ReactJS:
-						</th>
-					</tr>
-				</thead>
+			<span>
+				<p><strong>Pasos para dominar un nuevo lenguaje de programación:</strong></p>
 				<SimpleListRow simpleList={this.state.simpleList}/>
-			</table>
+			</span>
 		);
 	}	
 });
@@ -53,16 +40,18 @@ var SimpleListRow = React.createClass({
 		console.log(this.props);
 		var rows = this.props.simpleList;
 		return (
-			<tbody>
+			<ol>
 				{rows.map(function(element) {
-					return <tr key={element.id}><td>{element.row}</td></tr>
+					return (
+						<li>{element.row}</li>
+					);
 				})}
-			</tbody>
+			</ol>
 		);
 	}	
 });
 
 React.render(
-	<SimpleList url="jsx/simpleList_data.json"/>,
+	<SimpleList url="simpleList_data.json"/>,
 	document.getElementById('simpleList')
 )
