@@ -1,3 +1,4 @@
+"use strict"
 var SimpleList = React.createClass({
 	getInitialState: function() {
         return {
