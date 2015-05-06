@@ -1,4 +1,4 @@
-# ReactJS - Simple List Generator
-Simple List to demonstrate the use of ReactJS
+# ReactJS - Simple List
+###### by César Antón Dorantes <a href="https://twitter.com/reicek">@reicek</a>
 
 <a href='http://goo.gl/3BahiG' target="_blank">Demo</a>
