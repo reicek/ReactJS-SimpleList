@@ -5,4 +5,4 @@ This is a complementary material for <a href='https://platzi.com/blog/definir-vi
 
 <a href='http://goo.gl/3BahiG' target="_blank">Live Demo</a>
 
-Read the <a href='https://facebook.github.io/react/' target="_blank">official ReactJS</a> web page for more information.
+Please refer to the <a href='https://facebook.github.io/react/' target="_blank">official ReactJS</a> web page for more information.
